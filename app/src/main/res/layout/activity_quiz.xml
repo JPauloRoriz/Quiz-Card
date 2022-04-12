@@ -7,177 +7,162 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_quiz"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:background="#074E0B"
-        android:textColor="@color/white"
-        android:padding="11dp"
-        android:paddingStart="10dp"
         android:gravity="start"
+        android:padding="11dp"
         android:text="@string/quiz"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="RtlSymmetry" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:id="@+id/scroll"
+        android:padding="10dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tv_quiz"
         app:layout_constraintBottom_toTopOf="@+id/btn_next"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:elevation="10dp"
-        android:foregroundGravity="center"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="10dp"
-        app:cardUseCompatPadding="true"
-        app:layout_constraintTop_toTopOf="parent">
-
+        app:layout_constraintTop_toBottomOf="@+id/tv_quiz">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_questionTop"
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:text="@string/question"
-                android:textColor="#136E16"
-                android:textSize="19sp"
-                app:layout_constraintEnd_toEndOf="@+id/tv_question"
-                app:layout_constraintStart_toStartOf="@+id/tv_question"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
-                />
-
-
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_question"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minLines="9"
-                android:padding="20dp"
-                android:background="@drawable/shape_button"
-                android:foreground="#23000000"
-                android:gravity="center"
-                android:textSize="17sp"
-                app:layout_constraintBottom_toTopOf="@id/img_eye"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_questionTop"
-                tools:text="Qual a forma da hipotenusa elevado ao quadrado, tendo em vista que todos estão virados para cima de forma bidimensional" />
-
-            <ImageView
-                android:id="@+id/img_eye"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/shape_button"
-                android:elevation="8dp"
-                android:layout_marginBottom="15dp"
-                android:padding="6dp"
-                android:src="@drawable/ic_eye"
-                app:layout_constraintBottom_toTopOf="@+id/tv_answer"
-                app:layout_constraintEnd_toEndOf="@+id/tv_answer"
-                app:layout_constraintTop_toBottomOf="@+id/tv_question" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/answer"
-                android:textColor="#136E16"
-                android:textSize="19sp"
-
-                app:layout_constraintEnd_toEndOf="@+id/tv_answer"
-                app:layout_constraintStart_toStartOf="@+id/tv_answer"
-                app:layout_constraintTop_toTopOf="@+id/tv_answer" />
-
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_answer"
-                android:padding="15dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:visibility="invisible"
-                android:background="@drawable/shape_button"
-                android:foreground="#23000000"
-                android:gravity="center"
-                android:textSize="17sp"
+                android:layout_marginHorizontal="15dp"
+                android:elevation="10dp"
+                android:foregroundGravity="center"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img_eye"
-                tools:text="Qual a forma da hipotenusa elevado ao quadrado, tendo em vista que todos estão virados para cima de forma bidimensional"
-                />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_answer_frame"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:minLines="10"
-                android:background="@drawable/shape_button"
-                android:foreground="#23000000"
-                android:gravity="center"
-                android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img_eye"
-
-                />
-
-            <ImageView
-                android:id="@+id/img_interrogation"
-                android:src="@drawable/ic__interrogation"
-                android:layout_width="130dp"
-                android:layout_height="100dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="10dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.9"
-                />
+                app:layout_constraintTop_toTopOf="parent">
 
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_questionTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/question"
+                        android:textColor="#136E16"
+                        android:textSize="19sp"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_question"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/cl_card_view"
+
+
+                        />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_button"
+                        android:foreground="#23000000"
+                        android:gravity="center"
+                        android:minLines="9"
+                        android:padding="20dp"
+                        android:textSize="17sp"
+                        app:layout_constraintBottom_toTopOf="@id/img_eye"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_questionTop"
+                        tools:text="Qual a forma da hipotenusa elevado ao quadrado, tendo em vista que todos estão virados para cima de forma bidimensional" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_eye"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/shape_button"
+                        android:elevation="8dp"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_eye"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_answer"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_answer"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_question" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/answer"
+                        android:textColor="#136E16"
+                        android:textSize="19sp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_answer"
+                        app:layout_constraintStart_toStartOf="@+id/tv_answer"
+                        app:layout_constraintTop_toTopOf="@+id/tv_answer" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_button"
+                        android:foreground="#23000000"
+                        android:gravity="center"
+                        android:minLines="8"
+                        android:padding="15dp"
+                        android:textSize="17sp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_eye"
+                        tools:text="Qual a forma da hipotenusa elevado ao quadrado, tendo em vista que todos estão virados para cima de forma bidimensional" />
+
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_interrogation"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/ic__interrogation"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_answer"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_answer"
+                        app:layout_constraintStart_toStartOf="@+id/tv_answer"
+                        app:layout_constraintTop_toTopOf="@+id/tv_answer"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-
     </ScrollView>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_next"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="40dp"
-        android:padding="10dp"
-        android:layout_marginBottom="30dp"
-        android:textColor="@color/white"
         android:background="@drawable/shape_button"
         android:backgroundTint="#136E16"
+        android:padding="10dp"
         android:text="@string/next_card"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
